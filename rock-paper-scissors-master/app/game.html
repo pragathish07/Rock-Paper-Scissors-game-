@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="block" style="line-height: 2rem;">
+            <h2>ROCK</h2>
+            <h2>PAPER</h2>
+            <h2>SCISSORS</h2>
+        </div>
+        <div class="score">
+            <p>SCORE</p>
+            <h1 id="score">0</h1>
+        </div>
+    </div>
+    <main class="options"> 
+           <section class="items">
+            
+               <button  class="items-bg paper" data-choice="paper">
+                <span class="wrapper">
+                <img src="/images/icon-paper.svg"  alt="">
+                </span>
+                </button>
+            
+            <button  class="items-bg scissor" data-choice="scissors">
+                <span class="wrapper">
+                <img src="/images/icon-scissors.svg"   alt="">
+                </span>
+            </button>
+            
+            <button class="items-bg rock" data-choice="rock">
+             <span class="wrapper">
+            <img src="/images/icon-rock.svg"   alt="">
+            </span>
+            </button>
+           </section>
+    </main>
+
+    
+
+    <div class="selection" id="selection">
+     <div class="sel-blk">
+        <h4>YOU PICKED</h4>
+        <button  class="items-bg scissor">
+            <span class="wrapper">
+            <img src="/images/icon-paper.svg" id="userpicked" alt="">
+            </span>
+            </button>
+     </div>
+     <div class="mid-blk">
+        <h1 class="result"><span id="result"></span></h1>
+        <button class="reset" id="reset">play again</button>
+     </div>
+     <div class="sel-blk">
+        <h4>COMPUTER PICKED</h4>
+        <button  class="items-bg1 paper" >
+            <span class="wrapper">
+            <img src="/images/icon-scissors.svg" id="computer" alt="">
+            </span>
+        </button>
+     </div>
+    </div>
+
+    <button class="rules">rules</button>
+
+    <div class="rules-modal">
+        <div class="rule-tl">
+            <header>
+                <h2 class="rules-tlt">RULES</h2>
+                <button id="rules-btn">
+                    <img src="/images/icon-close.svg"  class="close-btn" alt="">
+                </button>
+            </header>
+            <img src="/images/image-rules.svg"  class="rule-img" alt="">
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+:root{
+     /* Primary */
+
+       --Scissors-Gradient: hsl(39, 89%, 49%);
+       --Paper-Gradient: hsl(230, 89%, 62%);
+       --Rock-Gradient: hsl(349, 71%, 52%);
+       --Lizard-Gradient: hsl(261, 73%, 60%);
+       --Cyan:hsl(189, 59%, 53%);
+
+       /* Neutral */
+
+       --Dark-Text: hsl(229, 25%, 31%);
+       --Score-Text: hsl(229, 64%, 46%);
+       --Header-Outline: hsl(217, 16%, 45%);
+
+       /* Background */
+
+    --Radial-Gradient: hsl(237, 49%, 15%);
+}
+
+body{
+    background-color: var(--Radial-Gradient);
+/*     font-family:'Poppins', sans-serif;
+ */}
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: solid var(--Header-Outline) 3px;
+    border-radius: 1rem;
+    width: 50%;
+    color: #fff;
+    padding: 1.2rem;
+    margin: 2rem auto;
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+    font-size: 1.2rem;
+    letter-spacing: 0;
+
+
+}
+.score{
+    padding: .2rem;
+    background-color: #fff;
+    width: 7rem;
+    border-radius: 10px;
+}
+.score p{
+    text-align: center;
+    font-size: 1rem;
+    color: var(--Score-Text);
+}
+.score h1{
+    color: var(--Dark-Text);
+    font-size: 4rem;
+    text-align: center;
+}
+main{
+    position: relative;
+}
+main::after{
+    background-image: url(/images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    content: '';
+    position: absolute;
+    height: 250px;
+    width: 500px;
+    top: 4rem;
+    left: 32rem;
+    z-index: -1;
+}
+.items{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 420px;
+    height: 360px;
+}
+.rock{
+    background-color: var(--Rock-Gradient);
+    border-radius: 100%;
+    width: 8rem;
+    height: 8rem;
+    border: none;
+    margin-top: 5rem;
+
+}
+.paper{
+    background-color: var(--Paper-Gradient);
+    border-radius: 100%;
+    width: 8rem;
+    height: 8rem;
+    border: none;
+    margin: 0 5rem 0 0;
+}
+.scissor{
+    background-color: var(--Scissors-Gradient);
+    border-radius: 100%;
+    width: 8rem;
+    height: 8rem;
+    border: none
+}
+.wrapper{
+    background-color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: inset 0 8px 0 0 rgba(0,0,0,0.125);
+
+}
+.items-bg{
+    box-shadow:inset 0 -8px 0 0 rgba(0,0,0,0.125);
+}
+
+
+.selection{
+    align-items: center;
+    justify-content: center;
+    display:none;
+    margin: 0 auto;
+}
+.sel-blk{
+    margin: 7rem auto;
+    transform: scale(1.5);
+}
+.sel-blk h4{
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: 300;
+}
+.mid-blk{
+    margin: 0;
+}
+.reset{
+    padding: .7rem 2.5rem;
+    background-color: #fff;
+    border-radius: 7px;
+    color: var(--Dark-Text);
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .9rem;
+    font-weight: 600;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+.reset:hover{
+    color: var(--Rock-Gradient);
+}
+.result{
+    text-transform: uppercase;
+    color: #fff;
+    margin:1rem ;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.rules{
+    padding: .7rem 1.2rem;
+    border: 2px solid var(--Header-Outline);
+    background: none;
+    color: #fff;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-family:'Poppins', sans-serif;
+    letter-spacing: 3px;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.rules-modal{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    display: none;
+    place-items: center;
+    background-color: rgba(0,0,0,0.5);
+    pointer-events: none;
+    opacity: 1;
+    transition: .5s ease-out;
+    pointer-events: initial;
+}
+.rule-tl{
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    z-index: 122;
+
+
+}
+#rules-btn{
+    cursor: pointer;
+    background: none;
+    border: none;
+
+}
+.rule-tl header{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.rule-img{
+    padding: 1rem;
+}
